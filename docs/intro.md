@@ -2,6 +2,6 @@
 sidebar_position: 1
 ---
 
-# Overview
+# Welcome
 
-This guide will help you build an extensible static web app using Docker, Docusaurus by Meta, GitHub Pages, and Freenom DNS.
+Welcome to HFES at UVa's Resources page!

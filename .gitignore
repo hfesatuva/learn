@@ -1,0 +1,96 @@
+
+Skip to content
+Pull requests
+Issues
+Marketplace
+Explore
+@hfesatuva
+facebook /
+docusaurus
+Public
+
+Code
+Issues 143
+Pull requests 40
+Discussions
+Actions
+Projects
+Security
+
+    Insights
+
+docusaurus/.gitignore
+@Josh-Cena
+Josh-Cena refactor(eslint-plugin): migrate to TS-ESLint infrastructure (#7276)
+Latest commit afc7248 13 days ago
+History
+16 contributors
+@slorber
+@endiliey
+@yangshun
+@Josh-Cena
+@Simek
+@ericnakagawa
+@SamChou19815
+@gimdongwoo
+@teikjun
+@steevehook
+@samsisle
+@neilsutcliffe
+41 lines (33 sloc) 644 Bytes
+.DS_Store
+.vscode
+.idea
+*.iml
+*.code-workspace
+.changelog
+
+node_modules
+.yarn
+
+.eslintcache
+
+yarn-error.log
+build
+coverage
+.docusaurus
+.cache-loader
+types
+test-website
+test-website-in-workspace
+
+packages/create-docusaurus/lib/
+packages/lqip-loader/lib/
+packages/docusaurus/lib/
+packages/docusaurus-*/lib/*
+packages/eslint-plugin/lib/
+packages/stylelint-copyright/lib/
+packages/docusaurus-*/lib-next/
+
+website/netlifyDeployPreview/*
+website/changelog
+!website/netlifyDeployPreview/index.html
+!website/netlifyDeployPreview/_redirects
+
+website/_dogfooding/_swizzle_theme_tests
+
+website/i18n/**/*
+#!website/i18n/fr
+#!website/i18n/fr/**/*
+
+.netlify
+
+    © 2022 GitHub, Inc.
+
+    Terms
+    Privacy
+    Security
+    Status
+    Docs
+    Contact GitHub
+    Pricing
+    API
+    Training
+    Blog
+    About
+

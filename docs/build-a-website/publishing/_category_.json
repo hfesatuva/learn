@@ -1,0 +1,8 @@
+{
+  "label": "Publishing",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Publish your website to the public internet at a custom domain!"
+  }
+}

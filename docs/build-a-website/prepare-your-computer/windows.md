@@ -17,7 +17,47 @@ The next section will look a little scary at first. You may hit some hiccups alo
 
 Windows 10 or Windows 11
 
-## Setup Steps
+## Video Walkthrough
+
+For written instructions, scroll down past these videos. These Have no audio, but show the setup process for Windows 11 requiring a WSL upgrade. 
+:::note
+If you are following along with the videos, restart your computer at the end of each video.
+:::
+
+### 0. Enabling Virtualization
+:::info
+This step is only required if you see "Disabled" [here during Video #1](https://youtu.be/Vco35UcW33M?t=14).
+:::
+<div class="video-container">
+    <iframe class="video" src="https://www.youtube.com/embed/MtVK_bLnwvw" allowfullscreen></iframe>
+</div>
+
+### 1. Activating WSL
+<div class="video-container">
+    <iframe class="video" src="https://www.youtube.com/embed/Vco35UcW33M" allowfullscreen></iframe>
+</div>
+
+### 2. Upgrading WSL Kernel
+<div class="video-container">
+    <iframe class="video" src="https://www.youtube.com/embed/lGNs9mrkp1s" allowfullscreen></iframe>
+</div>
+
+### 3. Docker, VS Code, & Finalizing WSL
+<div class="video-container">
+    <iframe class="video" src="https://www.youtube.com/embed/z4ghZpx-myc" allowfullscreen></iframe>
+</div>
+
+### 4. WSL & Windows Sharing Docker
+<div class="video-container">
+    <iframe class="video" src="https://www.youtube.com/embed/nWx-1tDr568" allowfullscreen></iframe>
+</div>
+
+### 5. Verifying Docker
+<div class="video-container">
+    <iframe class="video" src="https://www.youtube.com/embed/Oocxq1PLfCQ" allowfullscreen></iframe>
+</div>
+
+## Text Walkthrough
 
 1. Activate and set up [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install) (hopefully WSL2 rather than WSL1)
     - **Note**: if you already have activated WSL and are using WSL1, you will need to [upgrade to WSL2](https://docs.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package)
@@ -29,7 +69,7 @@ Windows 10 or Windows 11
 7. Install [Visual Studio Code](https://code.visualstudio.com/), a perfect app for editing code and running command prompt terminals.
     - You should also add this genuine Microsoft extension for coding inside your WSL2 Distro: [Remote - WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)
 
-## Verifying the Setup:
+### Verifying the Setup:
 
 Using Visual Studio Code (VS Code)...
 - click the green box in the bottom right.

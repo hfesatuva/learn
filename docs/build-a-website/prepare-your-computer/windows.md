@@ -29,32 +29,32 @@ If you are following along with the videos, restart your computer at the end of 
 This step is only required if you see "Disabled" [here during Video #1](https://youtu.be/Vco35UcW33M?t=14).
 :::
 <div class="video-container">
-    <iframe class="video" src="https://www.youtube.com/embed/MtVK_bLnwvw" allowfullscreen></iframe>
+    <iframe class="video" src="https://www.youtube.com/embed/MtVK_bLnwvw" allowfullscreen=""></iframe>
 </div>
 
 ### 1. Activating WSL
 <div class="video-container">
-    <iframe class="video" src="https://www.youtube.com/embed/Vco35UcW33M" allowfullscreen></iframe>
+    <iframe class="video" src="https://www.youtube.com/embed/Vco35UcW33M" allowfullscreen=""></iframe>
 </div>
 
 ### 2. Upgrading WSL Kernel
 <div class="video-container">
-    <iframe class="video" src="https://www.youtube.com/embed/lGNs9mrkp1s" allowfullscreen></iframe>
+    <iframe class="video" src="https://www.youtube.com/embed/lGNs9mrkp1s" allowfullscreen=""></iframe>
 </div>
 
 ### 3. Docker, VS Code, & Finalizing WSL
 <div class="video-container">
-    <iframe class="video" src="https://www.youtube.com/embed/z4ghZpx-myc" allowfullscreen></iframe>
+    <iframe class="video" src="https://www.youtube.com/embed/z4ghZpx-myc" allowfullscreen=""></iframe>
 </div>
 
 ### 4. WSL & Windows Sharing Docker
 <div class="video-container">
-    <iframe class="video" src="https://www.youtube.com/embed/nWx-1tDr568" allowfullscreen></iframe>
+    <iframe class="video" src="https://www.youtube.com/embed/nWx-1tDr568" allowfullscreen=""></iframe>
 </div>
 
 ### 5. Verifying Docker
 <div class="video-container">
-    <iframe class="video" src="https://www.youtube.com/embed/Oocxq1PLfCQ" allowfullscreen></iframe>
+    <iframe class="video" src="https://www.youtube.com/embed/Oocxq1PLfCQ" allowfullscreen=""></iframe>
 </div>
 
 ## Text Walkthrough

@@ -40,38 +40,81 @@ Use the refresh button in your file "Explorer" on the left. If you click down to
 
 **Useless fact**: "src" is common naming practice for folders containing "source" code. The code people write that is then interpreted or compiled into something a computer can understand.
 
-Right click hfesworkshop (your folder) and make a new file called "Dockerfile". Make another called "docker-compose.yml".
+Right click hfesworkshop (your folder) and make a new file called "Dockerfile". Make a few more called "docker-compose.yml", auth.sh, gitfile, and shorthand.sh.
 
 Click on docker-compose.yml and use the following template. This will be discussed in the synchronous workshop:
 
 ```yaml title="~/hfesworkshop/docker-compose.yml"
-version: "3"
+version: '3'
 services:
-  node-development-service:
+  dev-service:
     container_name: node-development-container
     build: .
     tty: true
     ports:
-      - "80:3000"
+    - "80:3000"
     image: node-development-image
     volumes:
-      - ./src:/src
+    - ./src:/home/node/src
+    - ./gitfile:/home/node/.gitconfig
+    - ./auth.sh:/home/node/auth
+    - ./secrets:/home/node/.ssh
 
 ```
 Click on Dockerfile and use the following template.
 
 ```yaml title="~/hfesworkshop/Dockerfile"
 FROM node:slim
-
 RUN apt update -y
-RUN apt install git curl net-tools -y
-# Change "password" to something of your choice
-RUN echo 'root:password' | chpasswd
-
-RUN usermod -aG root node
+RUN apt install git -y
 USER node
-
+ENV HOME /home/node
+WORKDIR $HOME
 ```
+Use the following templates for the other files.
+
+```bash title="~/hfesworkshop/auth.sh"
+#! /bin/bash
+eval `ssh-agent -s`;
+ssh-add $1;
+ssh -T git@github.com;
+```
+
+```git title="~/hfesworkshop/gitfile"
+[user]
+    name = Docker Developer, Insert Name Optionally
+    email = youremail@provider.com
+```
+
+```bash title="~/hfesworkshop/shorthand.sh"
+#! /bin/bash
+
+alias c=clear;
+alias dcUp="docker-compose up -d";
+alias dcDown="docker-compose down";
+alias dPrune="docker system prune --force";
+alias dcKill="docker-compose kill";
+alias dcRestart="dcDown; dcUp; dcIn $1;";
+
+dcIn() { docker-compose exec $1-service bash; };
+
+echo "Shorthands Added!";
+```
+
+Before moving on, you will need to turn your ```.sh``` shell script files into runnable programs. Do this with the following command that changes the mode (chmod) using the code 700 that means give me read, write, and execute permissions, but give anyone else no permissions:
+
+```bash
+chmod 700 ./*.sh
+```
+
+:::note
+If you want to use the shorthands (after the ORs below), you will need to add them to your current shell session with this command:
+```bash
+. ./shorthand.sh
+```
+:::
+
+
 Now we will use docker-compose to "build" our special container we defined in the Dockerfile.
 ```bash
 docker-compose build
@@ -80,9 +123,17 @@ Then we will "stand up" (up) a.k.a start the container in detached (-d) mode (me
 ```bash
 docker-compose up -d
 ```
-Now that it is running, we will get inside of it by executing (exec) a program called bash (this is the program for the command line terminal itself) using the "service" we created in the docker-compose.yml file called "node-development-service".
+OR
 ```bash
-docker-compose exec node-development-service bash
+dcUp
+```
+Now that it is running, we will get inside of it by executing (exec) a program called bash (this is the program for the command line terminal itself) using the "service" we created in the docker-compose.yml file called "dev-service".
+```bash
+docker-compose exec dev-service bash
+```
+OR 
+```bash
+dcIn dev
 ```
 You have basically entered the metaverse.
 **Useless fact**: Bash is just one of many programs for running text based "shells". It stands for Bourne Again Shell. Alternatives include zsh.

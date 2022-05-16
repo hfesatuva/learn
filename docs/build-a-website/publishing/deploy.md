@@ -136,7 +136,7 @@ yarn deploy
 
 Once you have a domain set up with the proper A records, you need to set the ```baseUrl``` as ```'/'``` instead of ```'/your-repository-name/'```. 
 
-:::Note
+:::note
 The command above will do most of the work, but there is **one more step** after that is necessary before your domain will work. Even if you have the A records (and CNAME if you are using a subdomain), you need to tell GitHub what your domain for this repo is.
 :::
 

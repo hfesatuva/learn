@@ -1,56 +1,55 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require("prism-react-renderer/themes/github");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Resources- HFES@UVA ',
-  tagline: 'Free guides, videos, and information about engineering and human factors.',
+  title: "Resources- HFES@UVA ",
+  tagline:
+    "Free guides, videos, and information about engineering and human factors.",
   //url: 'https://hfesatuva.github.io/',
   //baseUrl: '/resources/',
-  url: 'https://hfes.atuva.ga/',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  url: "https://hfes.atuva.ga/",
+  baseUrl: "/",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/favicon.ico",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'hfesatuva', // Usually your GitHub org/user name.
-  projectName: 'resources', // Usually your repo name.
+  organizationName: "hfesatuva", // Usually your GitHub org/user name.
+  projectName: "resources", // Usually your repo name.
   //trailingSlash: false,
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/hfesatuva/resources/tree/master/',
+          editUrl: "https://github.com/hfesatuva/resources/tree/master/",
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/hfesatuva/resources/tree/master/',
+          editUrl: "https://github.com/hfesatuva/resources/tree/master/",
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       }),
     ],
@@ -60,24 +59,23 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Resources- HFES at UVa',
+        title: "Resources- HFES at UVa",
         logo: {
-          alt: 'HFES at UVA Simple Logo',
-          src: 'img/logolightmode.svg',
-          srcDark: 'img/logodarkmode.svg',
+          alt: "HFES at UVA Simple Logo",
+          src: "img/logolightmode.svg",
+          srcDark: "img/logodarkmode.svg",
         },
         items: [
           {
-            type: 'doc',
-            docId: 'build-a-website/overview',
-            position: 'left',
-            label: 'Build a Website',
+            type: "doc",
+            docId: "build-a-website/overview",
+            position: "left",
+            label: "Build a Website",
           },
           {
-            type: 'doc',
-            docId: 'internships/list',
-            position: 'left',
-            label: 'Internships',
+            to: "/internships",
+            position: "left",
+            label: "Internships",
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           // {
@@ -88,14 +86,14 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
+        style: "dark",
         links: [
           {
-            title: 'Docs',
+            title: "Docs",
             items: [
               {
-                label: 'Featured Resource',
-                to: '/docs/intro',
+                label: "Featured Resource",
+                to: "/docs/intro",
               },
             ],
           },
@@ -137,10 +135,10 @@ const config = {
         darkTheme: darkCodeTheme,
       },
       colorMode: {
-        defaultMode: 'light',
+        defaultMode: "light",
         disableSwitch: false,
         respectPrefersColorScheme: true,
-      }
+      },
     }),
 };
 

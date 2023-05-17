@@ -9,10 +9,8 @@ const config = {
   title: "Resources- HFES@UVA ",
   tagline:
     "Free guides, videos, and information about engineering and human factors.",
-  //url: 'https://hfesatuva.github.io/',
-  //baseUrl: '/resources/',
-  url: "https://hfes.atuva.ga/",
-  baseUrl: "/",
+  url: "https://hfesatuva.github.io/",
+  baseUrl: "/learn/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",

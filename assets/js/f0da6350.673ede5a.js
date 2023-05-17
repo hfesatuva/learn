@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksite=self.webpackChunksite||[]).push([[3411],{6620:function(e){e.exports=JSON.parse('{"label":"hello","permalink":"/learn/blog/tags/hello","allTagsPath":"/learn/blog/tags","count":2}')}}]);
